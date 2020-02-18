@@ -3,6 +3,72 @@
     padding: 0;
     box-sizing: border-box;
 }
+/************************* index page style ****/
+header {
+  display: flex;
+  padding: 30px 50px;
+}
+.logo {
+  flex: 1;
+}
+.seacrh {
+  flex: 1;
+}
+
+.seacrh input {
+  width: 80%;
+  height: 35px;
+  padding-left: 15px;
+}
+.container {
+  width: 85%;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  
+}
+.item {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
+}
+
+.item img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.item-color {
+  min-width: 20%;
+  background-color: #ff6300;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.item-details {
+width: 80%;
+padding-left: 15px;
+}
+
+@media only screen and (max-width: 920px) {
+  .item {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .item {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .item {
+    width: 80%;
+  }
+}
 
 /************************* 404 error page style ****/
 
