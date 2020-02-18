@@ -1,0 +1,1 @@
+// handle  other end point (dynamic) '/otherend' get and post requests
