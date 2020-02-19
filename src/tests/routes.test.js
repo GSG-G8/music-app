@@ -1,3 +1,5 @@
+/* eslint-disable  */
+
 const request = require('supertest');
 
 const app = require('../app');
@@ -15,12 +17,15 @@ test('test main route /',(done)=>{
 
 test('test search route /search',(done)=>{
   request(app)
-  .get('/search')
+  .post('/search')
   .expect(200)
-  .expect('Content-Type', /html/)
+  .expect('Content-Type', /json/)
   .end((err,res)=>{
-      if(err) return done(err)
-      else done();
+    if(err){
+     return done(err)
+    }
+    else done();
+        
   })
 })
 
