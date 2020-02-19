@@ -6,15 +6,51 @@
 /************************* index page style ****/
 header {
   display: flex;
+  flex-wrap: wrap;
   padding: 30px 50px;
 }
 .logo {
-  flex: 1;
+  width: 50%;
+  padding-left: 80px;
 }
 .seacrh {
-  flex: 1;
+  width: 50%;
   position: relative;
+  padding-right: 30px;
 }
+.seacrh button {
+  width: 70px;
+  height: 35px;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+  .logo {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .seacrh {
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 0;
+  }
+  .seacrh input {
+    width: 80%;
+  }
+  .seacrh button {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .seacrh {
+    margin-right: 0;
+    display: flex;
+  }
+}
+
 
 .seacrh input {
   width: 80%;
@@ -24,7 +60,7 @@ header {
 .container {
   width: 85%;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
   
@@ -67,11 +103,6 @@ header {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .item {
-    width: 80%;
-  }
-}
 
 /************************* 404 error page style ****/
 
