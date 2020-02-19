@@ -1,5 +1,4 @@
-// handle client and server errors
-const path = require('path');
+const Path = require('path');
 
 exports.client = (req, res) =>{
     res.status(404)
