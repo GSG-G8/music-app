@@ -13,6 +13,7 @@ header {
 }
 .seacrh {
   flex: 1;
+  position: relative;
 }
 
 .seacrh input {
@@ -170,3 +171,22 @@ header {
     }
   }
 /*****************************404 style end ****/  
+
+.error {
+  position: absolute;
+  top: -10px;
+  left: 30%;
+  background-color: red;
+  animation: 3s error-effect 1s backwards;
+  opacity: 0;
+}
+
+
+@keyframes error-effect {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}

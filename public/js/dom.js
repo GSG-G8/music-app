@@ -41,5 +41,11 @@ submit.addEventListener('click', () => {
       container.textContent = '';
       res.forEach((element) => renderItem(element));
     }
-  }).catch((err) => console.error(err));
+  }).catch(() => {
+    const searchErr = document.querySelector('.seacrh');
+    const error = document.createElement('div');
+    error.classList.add('error');
+    error.textContent = 'internal server error 500';
+    searchErr.appendChild(error);
+  });
 });

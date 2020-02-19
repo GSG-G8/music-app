@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const dotenv = require('dotenv').config();
 
 
-const search = (req, res) => {
+const search = (req, res, next) => {
   const query = req.body.input;
 
   const url = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=${process.env.API_KEY}&format=json&limit=12`;
@@ -14,7 +14,7 @@ const search = (req, res) => {
       console.log(ourresult);
       res.json(ourresult);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => next(err));
 };
 
 module.exports = search;
