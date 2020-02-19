@@ -1,19 +1,20 @@
 const fetch = require('node-fetch');
+// eslint-disable-next-line no-unused-vars
 const dotenv = require('dotenv').config();
 
 
-const search = (req,res)=>{
+const search = (req, res) => {
   const query = req.body.input;
 
-  const url = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=${process.env.API_KEY}&format=json&limit=10`;
+  const url = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=${process.env.API_KEY}&format=json&limit=12`;
   fetch(url)
-    .then(result => result.json())
-    .then(result => {
-      const ourresult = result.results.albummatches.album
-      console.log(ourresult)
+    .then((result) => result.json())
+    .then((result) => {
+      const ourresult = result.results.albummatches.album;
+      console.log(ourresult);
       res.json(ourresult);
     })
-    .catch(err => console.log(err));
-}
+    .catch((err) => console.log(err));
+};
 
 module.exports = search;
